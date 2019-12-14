@@ -208,6 +208,15 @@ connection.on("open", function() {
         req.attribute = "ls";
         next();
         break;
+//here is my attempt to catch my two new commands. Will this work? Where do I put the functions? -L
+      case "volumeup":
+        function(turnvolumeup);
+        next();
+        break;
+      case "volumedown":
+        function(turnvolumedown);
+        next();
+        break;
       default:
         res.status(500).send({
           error: attribute + " is not a valid zone control attribute"
